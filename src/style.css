@@ -1,0 +1,60 @@
+body {
+  text-align: center;
+  font-family: "poppins", sans-serif;
+  margin-top: 30px;
+}
+
+form {
+  padding: 20px;
+}
+
+h1 {
+  color: #415b90;
+}
+h2 {
+  line-height: 50px;
+  color: #415b90;
+}
+h3 {
+  line-height: 50px;
+}
+h4 {
+  font-size: 50px;
+  color: #415b90;
+}
+.list {
+  line-height: 40px;
+  font-size: 25px;
+  color: #415b90;
+}
+
+.sun {
+  color: #f8ed86;
+}
+
+.rain {
+  color: #2ca4bf;
+}
+
+.snow {
+  color: #a5e9db;
+}
+
+.cloud {
+  color: #f8ed86;
+}
+
+.conditions {
+  line-height: 40px;
+  font-size: 25px;
+  color: #415b90;
+}
+
+.weather {
+  border: 1px solid #a5e9db;
+  padding: 25px;
+  max-width: 600px;
+  margin: 20px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
