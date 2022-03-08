@@ -38,8 +38,8 @@ function showWeather(response) {
   console.log(response.data);
   document.querySelector("h2").innerHTML = response.data.name;
   document.querySelector("h4").innerHTML = Math.round(response.data.main.temp);
-  document.querySelector("#conditions").innerHTMl =
-    response.data.weather[0].main;
+  document.querySelector("#conditions").innerHTML =
+    response.data.weather[0].description;
 }
 
 let cityForm = document.querySelector("#city-input");
