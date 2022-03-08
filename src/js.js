@@ -28,24 +28,18 @@ h1.innerHTML = `${day} ${hour}:${minute}`;
 
 function city(event) {
   event.preventDefault();
-  let searchInput = document.querySelector("#search-input");
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = searchInput.value;
-  let cityName = searchInput.value;
+  let cityName = document.querySelector("#search-input").value;
   let apiKey = "c26cb2147528c68477d823cc1d5509f4";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
+  axios.get(apiUrl).then(showWeather);
 }
 
-function showTemperature(response) {
-  console.log(response);
-  let temperature = Math.round(response.data.main.temp);
-  let conditions = response.data.weather[0].description;
-  console.log(temperature);
-  let h4 = document.querySelector("h4");
-  h4.innerHTML = `${temperature}°C`;
-  let condition = document.querySelector("#conditions");
-  condition.innerHTML = `${conditions}`;
+function showWeather(response) {
+  console.log(response.data);
+  document.querySelector("h2").innerHTML = response.data.name;
+  document.querySelector("h4").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#conditions").innerHTMl =
+    response.data.weather[0].main;
 }
 
 let cityForm = document.querySelector("#city-input");
@@ -58,7 +52,7 @@ function showPosition(position) {
   let apiKey = "c26cb2147528c68477d823cc1d5509f4";
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
+  axios.get(apiUrl).then(showWeather);
 }
 
 function getPosition() {
