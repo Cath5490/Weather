@@ -13,6 +13,7 @@ h1 {
 h2 {
   line-height: 50px;
   color: #415b90;
+  font-size: 40px;
 }
 h3 {
   line-height: 50px;
@@ -70,4 +71,9 @@ h4 {
   line-height: 50px;
   color: #415b90;
   font-size: 40px;
+}
+.date {
+  line-height: 50px;
+  color: #415b90;
+  font-size: 25px;
 }

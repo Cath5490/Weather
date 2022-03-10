@@ -42,6 +42,7 @@ function formatDate(timestamp) {
 }
 
 function showWeather(response) {
+  console.log(response.data.main);
   document.querySelector("#date").innerHTML = formatDate(
     response.data.dt * 1000
   );
@@ -51,6 +52,12 @@ function showWeather(response) {
   );
   document.querySelector("#conditions").innerHTML =
     response.data.weather[0].description;
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 let cityForm = document.querySelector("#city-input");
