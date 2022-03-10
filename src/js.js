@@ -37,7 +37,9 @@ function city(event) {
 function showWeather(response) {
   console.log(response.data);
   document.querySelector("h2").innerHTML = response.data.name;
-  document.querySelector("h4").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#temp").innerHTML = Math.round(
+    response.data.main.temp
+  );
   document.querySelector("#conditions").innerHTML =
     response.data.weather[0].description;
 }

@@ -54,8 +54,20 @@ h4 {
   color: #f8ed86;
 }
 
-.conditions {
+#conditions {
   line-height: 40px;
   font-size: 25px;
   color: #415b90;
+}
+
+#celcius {
+  line-height: 50px;
+  color: #415b90;
+  font-size: 40px;
+}
+
+#temp {
+  line-height: 50px;
+  color: #415b90;
+  font-size: 40px;
 }
