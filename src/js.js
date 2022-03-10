@@ -26,12 +26,16 @@ if (minute < 10) {
 let h1 = document.querySelector("h1");
 h1.innerHTML = `${day} ${hour}:${minute}`;
 
-function city(event) {
-  event.preventDefault();
-  let cityName = document.querySelector("#search-input").value;
+function search(cityName) {
   let apiKey = "c26cb2147528c68477d823cc1d5509f4";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
+}
+
+function city(event) {
+  event.preventDefault();
+  let cityName = document.querySelector("#search-input").value;
+  search(cityName);
 }
 
 function showWeather(response) {
@@ -80,3 +84,5 @@ function showCity(response) {
 
 let button = document.querySelector("button");
 button.addEventListener("click", getPosition);
+
+search("London");
