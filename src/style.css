@@ -61,7 +61,8 @@ h4 {
   color: #415b90;
 }
 
-#celcius {
+#celsius,
+#fahrenheit {
   line-height: 50px;
   color: #415b90;
   font-size: 40px;
