@@ -98,12 +98,17 @@ button.addEventListener("click", getPosition);
 
 function showFahrenheit(event) {
   event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   document.querySelector("#temp").innerHTML = Math.round(fahrenheitTemp);
 }
 
 function showCelsius(event) {
   event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+
   document.querySelector("#temp").innerHTML = Math.round(celsiusTemp);
 }
 celsiusTemp = null;

@@ -61,11 +61,11 @@ h4 {
   color: #415b90;
 }
 
-#celsius,
-#fahrenheit {
+.degree {
   line-height: 50px;
   color: #415b90;
-  font-size: 40px;
+  font-size: 30px;
+  text-decoration: none;
 }
 
 #temp {
@@ -77,4 +77,15 @@ h4 {
   line-height: 50px;
   color: #415b90;
   font-size: 25px;
+}
+
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: black;
 }
