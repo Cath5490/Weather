@@ -43,6 +43,7 @@ function formatDate(timestamp) {
 
 function showWeather(response) {
   celsiusTemp = response.data.main.temp;
+  console.log(response.data);
 
   document.querySelector("#date").innerHTML = formatDate(
     response.data.dt * 1000
@@ -51,6 +52,9 @@ function showWeather(response) {
   document.querySelector("#temp").innerHTML = Math.round(celsiusTemp);
   document.querySelector("#conditions").innerHTML =
     response.data.weather[0].description;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
   document
     .querySelector("#icon")
     .setAttribute(

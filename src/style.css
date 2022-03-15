@@ -89,3 +89,9 @@ h4 {
   text-decoration: none;
   color: black;
 }
+
+.wind {
+  line-height: 40px;
+  font-size: 25px;
+  color: #415b90;
+}
