@@ -41,6 +41,12 @@ function formatDate(timestamp) {
   return `${day} ${hour}:${minute}`;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "c26cb2147528c68477d823cc1d5509f4";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+}
+
 function showWeather(response) {
   celsiusTemp = response.data.main.temp;
   console.log(response.data);
@@ -61,6 +67,8 @@ function showWeather(response) {
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+
+  getForecast(response.data.coord);
 }
 
 let cityForm = document.querySelector("#city-input");
