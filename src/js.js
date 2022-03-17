@@ -41,35 +41,48 @@ function formatDate(timestamp) {
   return `${day} ${hour}:${minute}`;
 }
 
-function getForecast(coordinates) {
-  let apiKey = "c26cb2147528c68477d823cc1d5509f4";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then();
-}
-
-function displayForecast() {
-  let forecast = document.querySelector("#forecast");
-
-  let forecastHTML = "";
-
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
   let days = [
-    "Friday",
-    "Saturday",
     "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
+    "Friday",
+    "Saturday",
   ];
-  days.forEach(function (day) {
+
+  return days[day];
+}
+
+function getForecast(coordinates) {
+  let apiKey = "c26cb2147528c68477d823cc1d5509f4";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  let weatherForecast = response.data.daily;
+
+  let forecast = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row list">`;
+
+  weatherForecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
-      `<div class="col-4">${day}</div>
-          <div class="col-4"><img id="icon" src="" /></div>
-          <div class="col-4">7℃ - 12℃</div>`;
-    forecast.innerHTML = forecastHTML;
+      `<div class="col-4">${formatDay(forecastDay.dt)}</div>
+          <div class="col-4"><img id="icon" src="https://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"/></div>
+          <div class="col-2">${forecastDay.temp.min}</div>
+          <div class="col-2"${forecastDay.temp.max}</div>`;
   });
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
 }
 
 function showWeather(response) {
@@ -157,4 +170,3 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsius);
 
 search("London");
-displayForecast();
