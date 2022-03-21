@@ -3,12 +3,6 @@ body {
   font-family: "poppins", sans-serif;
 }
 
-.form-inline {
-  display: block;
-  margin: 0 auto;
-  max-width: 80%;
-}
-
 h1 {
   color: #415b90;
 }
