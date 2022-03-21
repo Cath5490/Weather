@@ -1,11 +1,12 @@
 body {
-  margin: 30px;
+  margin: 15px;
   font-family: "poppins", sans-serif;
 }
 
 .form-inline {
   display: block;
   margin: 0 auto;
+  max-width: 80%;
 }
 
 h1 {
@@ -37,7 +38,7 @@ h4 {
 }
 
 .list {
-  line-height: 40px;
+  line-height: 30px;
   font-size: 25px;
   color: #497285;
 }
@@ -64,17 +65,6 @@ h4 {
   line-height: 50px;
   color: #497285;
   font-size: 25px;
-}
-
-.active {
-  color: #415b90;
-  cursor: default;
-  text-decoration: none;
-}
-
-.active:hover {
-  text-decoration: none;
-  color: #415b90;
 }
 
 .wind {
