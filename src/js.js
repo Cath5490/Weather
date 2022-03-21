@@ -86,7 +86,6 @@ function displayForecast(response) {
 
 function showWeather(response) {
   celsiusTemp = response.data.main.temp;
-  console.log(response.data);
 
   document.querySelector("#date").innerHTML = formatDate(
     response.data.dt * 1000
@@ -135,7 +134,6 @@ function nameCity(position) {
 }
 
 function showCity(response) {
-  console.log(response);
   let city = response.data[0].name;
   console.log(city);
   let h2 = document.querySelector("h2");
@@ -144,28 +142,5 @@ function showCity(response) {
 
 let button = document.querySelector("#location-button");
 button.addEventListener("click", getPosition);
-
-function showFahrenheit(event) {
-  event.preventDefault();
-  celsius.classList.remove("active");
-  fahrenheit.classList.add("active");
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  document.querySelector("#temp").innerHTML = Math.round(fahrenheitTemp);
-}
-
-function showCelsius(event) {
-  event.preventDefault();
-  celsius.classList.add("active");
-  fahrenheit.classList.remove("active");
-
-  document.querySelector("#temp").innerHTML = Math.round(celsiusTemp);
-}
-celsiusTemp = null;
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", showFahrenheit);
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", showCelsius);
 
 search("London");

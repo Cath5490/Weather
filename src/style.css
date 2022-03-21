@@ -13,7 +13,7 @@ h1 {
 }
 h2 {
   line-height: 50px;
-  color: #2b4450;
+  color: #497285;
   font-size: 40px;
 }
 h3 {
@@ -25,9 +25,10 @@ h4 {
 }
 
 .weather {
+  color: #497285;
   background-color: #dfebed;
   text-align: center;
-  border: 2px solid #497285;
+  border: 1.5px solid #497285;
   padding: 25px;
   max-width: 600px;
   margin-top: 30px;
@@ -38,30 +39,30 @@ h4 {
 .list {
   line-height: 40px;
   font-size: 25px;
-  color: #2b4450;
+  color: #497285;
 }
 
 #conditions {
   line-height: 40px;
   font-size: 25px;
-  color: #2b4450;
+  color: #497285;
 }
 
 .degree {
   line-height: 50px;
-  color: #2b4450;
+  color: #497285;
   font-size: 30px;
   text-decoration: none;
 }
 
 #temp {
   line-height: 50px;
-  color: #2b4450;
-  font-size: 40px;
+  color: #497285;
+  font-size: 45px;
 }
 .date {
   line-height: 50px;
-  color: #2b4450;
+  color: #497285;
   font-size: 25px;
 }
 
@@ -79,9 +80,9 @@ h4 {
 .wind {
   line-height: 40px;
   font-size: 25px;
-  color: #2b4450;
+  color: #497285;
 }
 
 #celsius {
-  color: #2b4450;
+  color: #497285;
 }
