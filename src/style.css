@@ -3,8 +3,9 @@ body {
   font-family: "poppins", sans-serif;
 }
 
-form {
-  padding: 20px;
+.form-inline {
+  display: block;
+  margin: 0 auto;
 }
 
 h1 {

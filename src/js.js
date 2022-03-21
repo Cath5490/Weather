@@ -69,16 +69,16 @@ function displayForecast(response) {
 
   let forecast = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row list">`;
+  let forecastHTML = `<div class="row list" >`;
 
   weatherForecast.forEach(function (forecastDay, index) {
     if (index < 6)
-      forecastHTML += `<div class="col-4">${formatDay(forecastDay.dt)}</div>
-          <div class="col-4"><img id="icon" src="https://openweathermap.org/img/wn/${
+      forecastHTML += `<div class="col-4" >${formatDay(forecastDay.dt)}</div>
+          <div class="col-4" ><img id="icon" src="https://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
           }@2x.png"/></div>
-          <div  class="col-2">${Math.round(forecastDay.temp.min)}℃</div>
-          <div  class="col-2">${Math.round(forecastDay.temp.max)}℃</div>`;
+          <div  class="col-2" >${Math.round(forecastDay.temp.min)}℃</div>
+          <div  class="col-2" >${Math.round(forecastDay.temp.max)}℃</div>`;
   });
   forecastHTML = forecastHTML + `</div>`;
   forecast.innerHTML = forecastHTML;
@@ -142,7 +142,7 @@ function showCity(response) {
   h2.innerHTML = city;
 }
 
-let button = document.querySelector("button");
+let button = document.querySelector("#location-button");
 button.addEventListener("click", getPosition);
 
 function showFahrenheit(event) {
