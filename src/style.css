@@ -13,7 +13,7 @@ h1 {
 }
 h2 {
   line-height: 50px;
-  color: #415b90;
+  color: #2b4450;
   font-size: 40px;
 }
 h3 {
@@ -25,8 +25,9 @@ h4 {
 }
 
 .weather {
+  background-color: #dfebed;
   text-align: center;
-  border: 1px solid #a5e9db;
+  border: 2px solid #497285;
   padding: 25px;
   max-width: 600px;
   margin-top: 30px;
@@ -37,46 +38,30 @@ h4 {
 .list {
   line-height: 40px;
   font-size: 25px;
-  color: #415b90;
-}
-
-.sun {
-  color: #f8ed86;
-}
-
-.rain {
-  color: #2ca4bf;
-}
-
-.snow {
-  color: #a5e9db;
-}
-
-.cloud {
-  color: #f8ed86;
+  color: #2b4450;
 }
 
 #conditions {
   line-height: 40px;
   font-size: 25px;
-  color: #415b90;
+  color: #2b4450;
 }
 
 .degree {
   line-height: 50px;
-  color: #415b90;
+  color: #2b4450;
   font-size: 30px;
   text-decoration: none;
 }
 
 #temp {
   line-height: 50px;
-  color: #415b90;
+  color: #2b4450;
   font-size: 40px;
 }
 .date {
   line-height: 50px;
-  color: #415b90;
+  color: #2b4450;
   font-size: 25px;
 }
 
@@ -94,5 +79,9 @@ h4 {
 .wind {
   line-height: 40px;
   font-size: 25px;
-  color: #415b90;
+  color: #2b4450;
+}
+
+#celsius {
+  color: #2b4450;
 }
