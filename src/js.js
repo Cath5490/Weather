@@ -61,7 +61,7 @@ function displayForecast(response) {
 
   let forecast = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row list" >`;
+  let forecastHTML = `<div class="row list align-items-center">`;
 
   weatherForecast.forEach(function (forecastDay, index) {
     if (index < 6)
