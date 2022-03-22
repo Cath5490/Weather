@@ -3,20 +3,10 @@ body {
   font-family: "poppins", sans-serif;
 }
 
-h1 {
-  color: #415b90;
-}
 h2 {
   line-height: 50px;
   color: #497285;
   font-size: 40px;
-}
-h3 {
-  line-height: 50px;
-}
-h4 {
-  font-size: 50px;
-  color: #415b90;
 }
 
 .weather {
@@ -47,7 +37,6 @@ h4 {
   line-height: 50px;
   color: #497285;
   font-size: 30px;
-  text-decoration: none;
 }
 
 #temp {
@@ -71,6 +60,6 @@ h4 {
   color: #497285;
 }
 
-#icon {
+#forecast-icon {
   max-width: 70px;
 }
