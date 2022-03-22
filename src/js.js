@@ -66,7 +66,7 @@ function displayForecast(response) {
   weatherForecast.forEach(function (forecastDay, index) {
     if (index < 6)
       forecastHTML += `<div class="col-3" >${formatDay(forecastDay.dt)}</div>
-          <div class="col-2" ><img id="forecast-icon" src="https://openweathermap.org/img/wn/${
+          <div class="col-3" ><img id="forecast-icon" src="https://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
           }@2x.png"/></div>
           <div  class="col-3" >${Math.round(forecastDay.temp.min)}℃</div>
