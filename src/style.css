@@ -70,3 +70,7 @@ h4 {
 #celsius {
   color: #497285;
 }
+
+#icon {
+  max-width: 70px;
+}
